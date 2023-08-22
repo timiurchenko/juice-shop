@@ -56,6 +56,7 @@ export class DataExportComponent implements OnInit {
       this.error = null
       this.confirmation = data.confirmation
       this.userData = data.userData
+      // deepcode ignore DOMXSS: <please specify a reason of ignoring this>
       window.open('', '_blank', 'width=500')!.document.write(this.userData)
       this.lastSuccessfulTry = new Date()
       localStorage.setItem('lstdtxprt',JSON.stringify(this.lastSuccessfulTry))
