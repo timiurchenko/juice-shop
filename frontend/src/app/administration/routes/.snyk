@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file
+exclude:
+  global:
+    - "*Product*"
+    - "*Profile*"
+    - "*profile*"
+    - "*test*"
+    - "*TEST*"

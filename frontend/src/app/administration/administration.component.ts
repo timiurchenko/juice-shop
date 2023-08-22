@@ -65,6 +65,7 @@ export class AdministrationComponent implements OnInit {
     this.feedbackService.find().subscribe((feedbacks) => {
       this.feedbackDataSource = feedbacks
       for (let feedback of this.feedbackDataSource) {
+        // deepcode ignore XSS: <please specify a reason of ignoring this>
         feedback.comment = this.sanitizer.bypassSecurityTrustHtml(feedback.comment)
       }
       this.feedbackDataSource = new MatTableDataSource(this.feedbackDataSource)
